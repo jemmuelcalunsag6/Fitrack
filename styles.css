@@ -1,0 +1,340 @@
+html, body {  
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-image: url('images/gym.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffd700;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffd700;
+}
+
+/* Navigation Section */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a.nav-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ffd700; /* Gold background color */
+    color: white; /* White text color */
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black; /* Black outline */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a.nav-btn:hover {
+    background-color: #e6c200; /* Slightly darker gold on hover */
+    transform: translateY(-4px); /* Slight lift effect */
+}
+
+nav ul li a.nav-btn:active {
+    transform: translateY(2px); /* Button press effect */
+}
+
+/* Hero Section */
+.hero-section {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #ffd700; /* Gold button */
+    color: white; /* White text color */
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black; /* Black outline */
+}
+
+/* Trainers Section */
+.trainers-section {
+    padding: 20px;
+}
+
+.trainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trainer-card {
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: 1px solid #ffd700; /* Gold border */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    width: 300px;
+    color: #ffd700; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+    box-sizing: border-box; /* Ensures padding is included in width */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.trainer-card img {
+    border-radius: 50%;
+    display: block;
+    height: 150px;
+    margin: 0 auto 10px;
+    width: 150px;
+}
+
+.trainer-card h3 {
+    margin: 10px 0;
+}
+
+.trainer-card p {
+    margin: 5px 0;
+}
+
+.trainer-card a.book-btn {
+    background-color: #ffd700; /* Gold button */
+    color: white; /* White text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+    margin: 10px auto 0; /* Center the button */
+    display: block;
+    box-sizing: border-box; /* Includes padding in width calculation */
+    border: 2px solid black; /* Black outline */
+}
+
+.trainer-card a.book-btn:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    color: white;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    text-align: center;
+    color: #ffd700;
+    width: 100%;
+    margin-top: auto;  /* Pushes the footer to the bottom */
+    position: static;  /* Removes relative positioning */
+}
+
+
+/* Form Styles */
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0; /* Keeps spacing consistent */
+    border-radius: 8px;
+    border: 2px solid #ffd700; /* Gold border */
+    background-color: #333;
+    color: #ffd700; /* Gold text */
+    box-sizing: border-box; 
+    display: block; /* Ensures it's treated like a block element */
+    text-align: center; /* Keeps the text aligned */
+    resize: none; /* Prevents resizing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    display: block; /* Makes labels appear above fields */
+    text-align: center; /* Center-aligns label text */
+    margin-bottom: 5px; /* Adds spacing between label and input */
+    font-size: 18px; /* Consistent font size */
+    color: #ffd700; /* Gold color for labels */
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 500px; /* Maximum form width */
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.form-group {
+    margin-bottom: 20px; /* Adds spacing between inputs */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns the content */
+}
+
+.form-group label {
+    font-size: 18px;
+    margin-bottom: 8px; /* Space between label and input */
+}
+
+.session-date {
+    margin-top: 20px; /* Moves the Session Date field slightly lower */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ffd700; /* Gold border */
+    background-color: #333;
+    color: #ffd700; /* Gold text */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    max-width: 100%; /* Ensure it never exceeds form width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="datetime-local"]:focus {
+    border-color: #ffd700; /* Gold border on focus */
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #ffd700; /* Gold button */
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid black; /* Black outline */
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white; /* White text */
+    width: 100%;
+    max-width: 400px; /* Keep button aligned with input fields */
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    color: white;
+}
+
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+.login-link {
+    margin-top: 30px; /* Adjusts spacing above the link */
+    margin-bottom: 50px; /* Adds space below to keep it away from the footer */
+    text-align: center; /* Centers the link */
+}
+
+.login-link a {
+    color: #ffd700; /* Gold color for the link */
+    text-decoration: none; /* Removes underline */
+    font-size: 16px; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.login-link a:hover {
+    color: #e6c200; /* Slightly darker gold on hover */
+    text-decoration: underline; /* Adds underline on hover */
+}
+/* General Hyperlink Styling */
+a {
+    color: #ffd700; /* Gold color for links */
+    text-decoration: none; /* Removes default underline */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #e6c200; /* Slightly darker gold on hover */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+a:active {
+    transform: translateY(2px); /* Press effect when clicked */
+}
+.gold-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.gold-link:hover {
+    color: #e6c200;
+    transform: translateY(-2px);
+}
+.status-message {
+    background-color: #155724;
+    color: #c3e6cb;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #a2caab;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Makes borders cleaner */
+}
+
+th {
+    text-align: center; /* Center-align text in the table headers */
+    padding: 10px; /* Adds some spacing inside headers */
+    background-color: #ffd700;; /* Optional: Header background color */
+    color: #fff; /* Optional: Text color */
+}
+
+td {
+    text-align: center; /* Optional: Center-align table content */
+    padding: 8px;
+}
+
+ul, ol {
+    list-style: none; /* Removes bullets/numbers */
+    padding: 0;       /* Removes left padding */
+    margin: 0;        /* Optional: Removes default margin */
+}
+
+
